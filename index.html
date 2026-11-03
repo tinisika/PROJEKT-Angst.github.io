@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PROJEKT:Angst</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         МУЗЫКА НАЧАЛЬНОГО ЭКРАНА
+         ========================= -->
+
+    <audio id="startMusic" loop>
+        <source src="muzika/v_nachalo.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =========================
+         МУЗЫКА ТИТРОВ
+         ========================= -->
+
+    <audio id="creditsMusic" loop>
+        <source src="muzika/konez.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =========================
+         КНОПКА ЗВУКА
+         ========================= -->
+
+    <button id="volumeButton">
+        <img src="ikons/zvuk.png" alt="Sound">
+    </button>
+
+
+    <!-- ПОЛЗУНОК ГРОМКОСТИ -->
+
+    <input
+        type="range"
+        id="volumeSlider"
+        min="0"
+        max="1"
+        step="0.01"
+        value="1"
+    >
+
+
+    <!-- =========================
+         СТАРТОВЫЙ ЭКРАН
+         ========================= -->
+
+    <div class="start-screen">
+
+        <img src="kartinki/glava.jpg" alt="Filmplakat">
+
+        <button id="playButton"></button>
+
+    </div>
+
+
+    <!-- =========================
+         ЭКРАН ИГРЫ
+         ========================= -->
+
+    <div class="video-screen">
+
+        <video id="film">
+
+            <source
+                src="vidosiki/nachalo.mp4"
+                type="video/mp4"
+            >
+
+            Dein Browser unterstützt dieses Video nicht.
+
+        </video>
+
+
+        <!-- ПОВТОР -->
+
+        <button id="repeatButton">
+
+            <img src="ikons/nazad.png" alt="Repeat">
+
+        </button>
+
+
+        <!-- =========================
+             КНОПКИ ВЫБОРА
+             ========================= -->
+
+        <div id="choiceButtons">
+
+            <button id="choiceA"></button>
+
+            <button id="choiceB"></button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         ТИТРЫ
+         ========================= -->
+
+    <div id="creditsScreen">
+
+        <video id="creditsVideo">
+
+            <source
+                src="vidosiki/titru.mp4"
+                type="video/mp4"
+            >
+
+        </video>
+
+        <button id="homeButton">
+
+            <img src="ikons/domoy.png" alt="Home">
+
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
